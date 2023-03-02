@@ -1,0 +1,469 @@
+﻿/* FEATURE LIST */
+#featuresList {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* align-items: center; */
+    height: 70%;
+    /* margin-top: 10%; */
+}
+
+    #featuresList .featuresListTop {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        /* gap: 50px; */
+        justify-content: space-around;
+    }
+
+    #featuresList .featuresListBot {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        /* gap: 50px; */
+        justify-content: space-evenly;
+        margin-top: 70px;
+    }
+
+.featuresItems {
+    width: 285px;
+    height: 200px;
+    border-radius: 10px;
+    border: 2px solid;
+    background-color: transparent;
+    /* opacity: 0.5; */
+    border-color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+    .featuresItems .icon {
+        font-size: 80px;
+        /* transition: .5s; */
+    }
+
+    .featuresItems .text {
+        font-size: 18px;
+        font-family: var(--primary-font);
+        font-weight: 600;
+        color: white;
+        /* mix-blend-mode: screen; */
+        /* background-color: white; */
+        width: 100%;
+        height: 120%;
+        padding: 5px 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+        transition: .5s;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .featuresItems:hover .text {
+        font-size: 18px;
+        font-family: var(--primary-font);
+        font-weight: 600;
+        color: black;
+        mix-blend-mode: screen;
+        background-color: white;
+        padding: 5px 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+        cursor: pointer;
+        position: absolute;
+        z-index: 1;
+    }
+
+.popupContainer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    visibility: hidden;
+    /* display: none; */
+}
+
+.popupBackground {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .4;
+}
+
+.popup {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 1;
+    margin: auto;
+    width: 800px;
+    height: 500px;
+    border-radius: 15px;
+    background-color: white;
+    padding: 25px 25px;
+    z-index: 3;
+}
+
+.popupHead {
+    margin-bottom: 20px;
+    height: 10%;
+}
+
+    .popupHead h2 {
+        font-family: var(--primary-font);
+        font-weight: 800;
+        font-size: 26px;
+    }
+
+.popupBody {
+    height: 60%;
+    padding-right: 70px;
+    padding-left: 15px;
+    margin-bottom: 30px;
+}
+
+    .popupBody .popupText {
+        font-family: var(--primary-font);
+        text-indent: -10px;
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+progress {
+    border-radius: 7px;
+    width: 50%;
+    height: 22px;
+    margin-right: 5px;
+    margin-left: 20px;
+    /* margin-left: -11.5%; */
+    /* box-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.2 ); */
+}
+
+    progress::-webkit-progress-bar {
+        background-color: white;
+        border-radius: 7px;
+        border: solid 2px #333;
+    }
+
+    progress::-webkit-progress-value {
+        background-color: #333;
+        border-radius: 2px;
+        /* box-shadow: 1px 1px 5px 3px rgba( 255, 0, 0, 0.8 ); */
+    }
+
+    progress::-moz-progress-bar {
+        /* style rules */
+    }
+
+.popupFoot {
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+    .popupFoot h4 {
+        font-family: var(--primary-font);
+        font-size: 18px;
+        /* margin-right: 30px; */
+    }
+
+.popupButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+    .popupButton button {
+        cursor: pointer;
+        width: 70px;
+        height: 30px;
+        font-family: var(--primary-font);
+        font-weight: 700;
+        border: solid 2px #1e1e1e;
+        border-radius: 7px;
+        /* transition: .5s; */
+    }
+
+        .popupButton button:hover {
+            background-color: #c7c7c7;
+        }
+
+.open-popup {
+    visibility: visible !important;
+}
+
+/* FOOTER */
+#footer {
+    position: absolute;
+    bottom: 0;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+}
+
+    #footer p {
+        color: black;
+        font-family: var(--primary-font);
+        font-weight: 800;
+        font-size: 20px;
+        mix-blend-mode: screen;
+        background-color: white;
+        border-radius: 10px 10px 0 0;
+        padding: 0 15px;
+        z-index: -1;
+    }
+
+@media screen and (max-width: 1630px) {
+    #featuresList .featuresListTop {
+        display: flex;
+        grid-template-columns: auto auto auto auto;
+        gap: 50px;
+    }
+
+    #featuresList .featuresListBot {
+        display: flex;
+        grid-template-columns: auto auto auto auto;
+        gap: 50px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    #featuresList {
+        flex-direction: row;
+        gap: 100px;
+    }
+
+        #featuresList .featuresListTop {
+            display: flex;
+            flex-direction: column;
+        }
+
+    .featuresListTop .featuresItems {
+        flex-direction: row;
+        height: 100px;
+        zoom: 95%;
+    }
+
+    .featuresItems .text {
+        flex-direction: row;
+    }
+
+    .featuresItems:hover .text {
+        flex-direction: row;
+    }
+
+    #featuresList .featuresListBot {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .featuresListBot .featuresItems {
+        flex-direction: row;
+        height: 100px;
+    }
+
+    #footer {
+        justify-content: flex-end;
+    }
+}
+
+@media screen and (max-height: 950px) {
+    .topContainer {
+        height: 25%;
+        zoom: 90%;
+    }
+
+    .headerLeft .headerLeftBotText {
+        font-size: 40px;
+    }
+
+    #featuresList {
+        height: 75%;
+    }
+
+    .featuresListTop .featuresItems {
+        zoom: 90%;
+    }
+
+    .featuresListBot .featuresItems {
+        zoom: 90%;
+    }
+}
+
+@media screen and (max-height: 700px) {
+    #featuresList {
+        zoom: 90%;
+    }
+
+        #featuresList .featuresListBot {
+            margin-top: 50px;
+        }
+
+    #footer {
+        zoom: 70%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .headerLeft .headerLeftBotText {
+        font-size: 40px;
+    }
+
+    .popupContainer {
+        zoom: 90%;
+    }
+}
+
+@media screen and (max-width: 1050px) and (max-height: 700px) {
+    .headerLeft .headerLeftBotText {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #content {
+        margin: 0 100px;
+    }
+
+    .headerLeft .headerLeftBotText {
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #content {
+        margin: 0 50px;
+    }
+
+    .popupContainer {
+        zoom: 80%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    body {
+        margin-top: -30px;
+    }
+
+    .headerLeft .headerLeftBotText {
+        font-size: 30px;
+    }
+
+    .headerLeft .headerLeftTopText {
+        font-size: 15px;
+    }
+
+    .headerRight .headerRightText {
+        font-size: 15px;
+    }
+
+    #content {
+        margin: 30px;
+    }
+
+    #featuresList {
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
+    }
+
+        #featuresList .featuresListTop {
+            gap: 30px;
+        }
+
+        #featuresList .featuresListBot {
+            margin-top: 30px;
+            gap: 30px;
+        }
+
+    .featuresListTop .featuresItems {
+        height: 50px;
+        zoom: 100%;
+    }
+
+    .featuresListBot .featuresItems {
+        height: 50px;
+        zoom: 100%;
+    }
+
+    .featuresItems .text {
+        justify-content: flex-start;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .featuresItems:hover .text {
+        justify-content: flex-start;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    #featuresList .featuresItems .icon {
+        font-size: 30px;
+        padding-right: 30px;
+    }
+
+    .popupContainer {
+        zoom: 80%;
+    }
+
+    .popup {
+        width: 600px;
+        height: 700px;
+    }
+
+    #footer {
+        justify-content: center;
+    }
+
+        #footer p {
+            font-size: 15px;
+        }
+}
+
+@media screen and (max-width: 720px) and (max-height: 800px) {
+    #featuresList .featuresListTop {
+        gap: 15px;
+    }
+
+    #featuresList .featuresListBot {
+        gap: 15px
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .headerLeft .headerLeftBotText {
+        font-size: 25px;
+    }
+
+    .popupContainer {
+        zoom: 70%;
+    }
+
+    .popup {
+        width: 90%;
+    }
+}
+
