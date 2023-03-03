@@ -13,7 +13,8 @@ public partial class Account
     [Key]
     [Column("ID")]
     public int Id { get; set; }
-
+    [Required]
+    public int Role { get; set; }
     [Required]
     [StringLength(50)]
     public string Email { get; set; }

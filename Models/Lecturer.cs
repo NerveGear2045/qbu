@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
@@ -49,5 +50,6 @@ public partial class Lecturer
 
     [ForeignKey("Id")]
     [InverseProperty("Lecturer")]
+    [DisplayName("Email")]
     public virtual Account IdNavigation { get; set; }
 }
